@@ -26,13 +26,15 @@
     echo "<p>Conexión a la base de datos: Exitosa</p>";
     ?>
 
-    <p>¿Qué desea realizar?</p>
-    <ul>
-        <li><a href="Consulta.php">Consulta de productos</a></li>
-        <li><a href="Registro.php">Registro de productos</a></li>
-        <li><a href="Actualización.php">Actualización de información</a></li>
-        <li><a href="Punto de venta.php">Ventas</a></li>
-    </ul>
+    <p>¿Qué desea realizar? Se requiere inicio de sesión previo.</p>
+    <form action="Revisión.php" method="post">
+        <select name="Acción"> <?php //Corregir?>
+            <option value="Registro">Registro</option>
+            <option value="Actualización">Actualización</option>
+            <option value="Venta">Venta</option>
+        </select>
+        <input type="submit">
+    </form>
 </body>
 
 </html>

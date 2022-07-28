@@ -10,6 +10,8 @@ if (!$connS) {
     die("<p>Error al conectar con la base de datos de usuarios: " . mysqli_connect_error() . "</p><p>Pruebe a verificar la conexión del servidor...</p>");
 }
 echo "<p>Conexión a base de datos: Exitosa</p>";
+require_once("index.php");
+// echo "<script><script>";
 
 $sqlS = "SELECT * FROM usuarios WHERE `Correo electrónico` = '" . $_POST["userEmail"] . "' AND Contraseña = '" . $_POST["userPassword"] . "'";
 //$result = mysqli_query($conn, $sql);

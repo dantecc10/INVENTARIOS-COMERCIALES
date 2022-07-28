@@ -8,9 +8,10 @@
     <title>Document</title>
 </head>
 
-<body>
+?php
     <?php
     require_once("Conexión.php");
+    require_once("Inicio de sesión.php"); //Corregir
     ?>
     <table>
         <?php
