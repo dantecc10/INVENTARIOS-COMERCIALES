@@ -11,14 +11,19 @@ if (!$connS) {
 }
 echo "<p>Conexión a base de datos: Exitosa</p>";
 
-
-$sqlS = "SELECT * FROM usuarios WHERE `Correo electrónico` = '" . $_POST["userEmail"] . "') AND (`Contraseña` = '" . $_POST["userPassword"] . "')";
+$sqlS = "SELECT * FROM usuarios WHERE `Correo electrónico` = '" . $_POST["userEmail"] . "' AND Contraseña = '" . $_POST["userPassword"] . "'";
 //$result = mysqli_query($conn, $sql);
 $result = mysqli_query($connS, $sqlS) or die("Error en la consulta a la base de datos");
 
 if ($columna = mysqli_fetch_array($result)) {
     if ($_POST["userEmail"] == $columna['Correo electrónico'] && $_POST["userPassword"] == $columna['Contraseña']) {
-        echo ("Bienvenido, " . $columna["Nombre"] . " " . $columna["Apellido paterno"] . " " . $columna["Apellido materno"] . ", has iniciado sesión correctamente.");
+        $resultadoSesión = ("Bienvenido, " . $columna["Nombre"] . " " . $columna["Apellido paterno"] . " " . $columna["Apellido materno"] . ", has iniciado sesión correctamente.");
+        echo $resultadoSesión;
+        $Acceso = True;
+        header('Location: http://192.168.1.74/INVENTARIOS-COMERCIALES/Consulta.php');
+    } else {
+        $resultadoSesión = "Los datos que introduciste son erróneos.";
+        $Acceso = False;
+        echo $resultadoSesión;
     }
 }
-?>

@@ -33,10 +33,6 @@
         <li><a href="Actualización.php">Actualización de información</a></li>
         <li><a href="Punto de venta.php">Ventas</a></li>
     </ul>
-
-
-    <a>Consultar productos</a>
-
 </body>
 
 </html>
