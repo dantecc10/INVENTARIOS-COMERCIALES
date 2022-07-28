@@ -2,14 +2,43 @@
 <html lang="en">
 
 <head>
+    <!--<link rel="shortcut icon" href="" type="image/x-icon">!-->
+    <link rel="Stylesheet" href="CSS/CSS Global - Claro.css" Type="text/css" MEDIA="screen">
+
+    <meta name="author" content="Dante Castelán Carpinteyro">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>El Mundo del Regalo</title>
 </head>
 
 <body>
-    <h1>El Mundo del Regalo</h1>
+    <header id="Encabezado">
+        <div id="Contenedor-Encabezado">
+            <div id="Contenido-Encabezado">
+                <h1>El Mundo del Regalo</h1>
+                <a href="index.php">
+                    <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
+                </a>
+                <div class="Menú-Desplegable"> <button class="Botón-Desplegar">Menú</button>
+                    <div class="Contenido-Desplegable">
+                        <a href="Acciones/Consulta.php">Consultar productos</a>
+                        <a href="Acciones/Registro.php">Registro</a>
+                        <a href="Acciones/Actualización.php">Actualización</a>
+                        <a href="Acciones/Venta.php">Venta</a>
+                        <a id="CambiaTema" onclick="javascript:CambiarTemaPrincipal()">Cambiar tema</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Encabezado-Superior"></div>
+        <div id="Encabezado-Inferior"></div>
+    </header>
+
+
+
+
+
     <p>Bienvenido, si tiene una cuenta, inicie sesión, de lo contrario, puede consultar el catálogo en el siguiente enlace:
     </p>
     <form action="Inicio de sesión.php" method="POST">
