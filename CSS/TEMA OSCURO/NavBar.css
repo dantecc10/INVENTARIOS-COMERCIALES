@@ -3,13 +3,13 @@
 /*Punto de ruptura para pantallas grandes (equipos de escritorio)*/
     {
     body {
-        background-color: #acc6dd;
+        background-color: #162244;
     }
 
     h1 {
         border-radius: 20px;
         background-color: #1622448d;
-        color: whitesmoke;
+        color: #07b89e;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 40px;
         text-align: center;
@@ -31,12 +31,12 @@
 
     #Encabezado-Superior {
         height: 50%;
-        background-color: #011c4b;
+        background-color: #051229;
     }
 
     #Encabezado-Inferior {
         height: 50%;
-        background-color: #011c4b;
+        background-color: #0C37E8;
     }
 
     #Contenedor-Encabezado {
@@ -73,13 +73,13 @@
 
     /*Punto de ruptura para tablets*/
     body {
-        background-color: #acc6dd;
+        background-color: #162244;
     }
 
     h1 {
         border-radius: 20px;
         background-color: #1622448d;
-        color: whitesmoke;
+        color: #07b89e;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 40px;
         text-align: center;
@@ -94,12 +94,12 @@
 
     #Encabezado-Superior {
         height: 50%;
-        background-color: #011c4b;
+        background-color: #051229;
     }
 
     #Encabezado-Inferior {
         height: 50%;
-        background-color: #011c4b;
+        background-color: #0C37E8;
     }
 
     #Contenedor-Encabezado {
@@ -130,15 +130,15 @@
 /*480px*/
     {
 
-    /*Punto de ruptura para móviles*/
+    /*Punto de ruptura para tablets*/
     body {
-        background-color: #acc6dd;
+        background-color: #162244;
     }
 
     h1 {
         border-radius: 20px;
         background-color: #1622448d;
-        color: whitesmoke;
+        color: #07b89e;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 30px;
         text-align: center;
@@ -154,12 +154,12 @@
 
     #Encabezado-Superior {
         height: 50%;
-        background-color: #011c4b;
+        background-color: #051229;
     }
 
     #Encabezado-Inferior {
         height: 50%;
-        background-color: #011c4b;
+        background-color: #0C37E8;
     }
 
     #Contenedor-Encabezado {

@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    <h1>El Mundo del Regalo</h1>
-
     <?php
     $servername = "localhost";
     $database = $dbname = "life";

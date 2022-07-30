@@ -3,7 +3,7 @@
 
 <head>
     <!--<link rel="shortcut icon" href="" type="image/x-icon">!-->
-    <link rel="Stylesheet" href="CSS/CSS Global - Claro.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/CSS GLOBAL - TEMA CLARO.css" Type="text/css" MEDIA="screen">
 
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta charset="UTF-8">
@@ -22,10 +22,10 @@
                 </a>
                 <div class="Menú-Desplegable"> <button class="Botón-Desplegar">Menú</button>
                     <div class="Contenido-Desplegable">
-                        <a href="Acciones/Consulta.php">Consultar productos</a>
-                        <a href="Acciones/Registro.php">Registro</a>
-                        <a href="Acciones/Actualización.php">Actualización</a>
-                        <a href="Acciones/Venta.php">Venta</a>
+                        <a href="Consulta.php">Consultar productos</a>
+                        <a href="Registro.php">Registro</a>
+                        <a href="Actualización.php">Actualización</a>
+                        <a href="Venta.php">Venta</a>
                         <a id="CambiaTema" onclick="javascript:CambiarTemaPrincipal()">Cambiar tema</a>
                     </div>
                 </div>

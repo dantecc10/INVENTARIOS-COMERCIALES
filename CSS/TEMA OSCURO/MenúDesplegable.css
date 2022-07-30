@@ -9,8 +9,7 @@
     .Botón-Desplegar {
         font-weight: bold;
         box-shadow: #07A189;
-        border-color: #38acff;
-        background-color: white;
+        background-color: #07A189;
         color: #2F2F35;
         padding: 16px;
         font-size: 20px;
@@ -22,14 +21,14 @@
     .Contenido-Desplegable {
         display: none;
         position: absolute;
-        background-color: #a2bfc7;
+        background-color: #2F2F35;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px #07B89E;
         z-index: 1;
     }
 
     .Contenido-Desplegable a {
-        color: #2b4d66;
+        color: #07B89E;
         font-size: 20px;
         font-family: 'Times New Roman', Times, serif;
         padding: 12px 16px;
@@ -67,8 +66,7 @@
     .Botón-Desplegar {
         font-weight: bold;
         box-shadow: #07A189;
-        border-color: #38acff;
-        background-color: white;
+        background-color: #07A189;
         color: #2F2F35;
         padding: 16px;
         font-size: 20px;
@@ -81,7 +79,7 @@
     .Contenido-Desplegable {
         display: none;
         position: absolute;
-        background-color: #a2bfc7;
+        background-color: #2F2F35;
         min-width: 90px;
         max-width: 120px;
         box-shadow: 0px 8px 16px 0px #07B89E;
@@ -90,7 +88,7 @@
     }
 
     .Contenido-Desplegable a {
-        color: #2b4d66;
+        color: #07B89E;
         font-size: 15px;
         font-family: 'Times New Roman', Times, serif;
         padding: 12px 16px;
@@ -128,8 +126,7 @@
     .Botón-Desplegar {
         font-weight: bold;
         box-shadow: #07A189;
-        border-color: #38acff;
-        background-color: white;
+        background-color: #07A189;
         color: #2F2F35;
         padding: 16px;
         font-size: 20px;
@@ -143,7 +140,7 @@
     .Contenido-Desplegable {
         display: none;
         position: absolute;
-        background-color: #a2bfc7;
+        background-color: #2F2F35;
         min-width: 90px;
         max-width: 120px;
         box-shadow: 0px 8px 16px 0px #07B89E;
@@ -152,7 +149,7 @@
     }
 
     .Contenido-Desplegable a {
-        color: #2b4d66;
+        color: #07B89E;
         font-size: 15px;
         font-family: 'Times New Roman', Times, serif;
         padding: 12px 16px;

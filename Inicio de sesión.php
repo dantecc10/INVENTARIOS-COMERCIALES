@@ -22,7 +22,7 @@ if ($columna = mysqli_fetch_array($result)) {
         $resultadoSesión = ("Bienvenido, " . $columna["Nombre"] . " " . $columna["Apellido paterno"] . " " . $columna["Apellido materno"] . ", has iniciado sesión correctamente.");
         echo $resultadoSesión;
         $Acceso = True;
-        header('Location: http://192.168.1.74/INVENTARIOS-COMERCIALES/Consulta.php');
+        header('Location: Consulta.php');
     } else {
         $resultadoSesión = "Los datos que introduciste son erróneos.";
         $Acceso = False;

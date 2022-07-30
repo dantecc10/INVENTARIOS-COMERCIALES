@@ -13,11 +13,11 @@
     require_once("Inicio de sesión.php"); //Corregir
 
     if ($Acceso == True) {
-        $url = ("http://192.168.1.74/INVENTARIOS-COMERCIALES/" . $_POST["Acción"] . ".php");
+        $url = ($_POST["Acción"] . ".php");
         header("location$url");
         echo "<p>Usted tiene autorización para administrar esta parte del sitio web...</p><br>";
     } else {
-        $url = ("http://192.168.1.74/INVENTARIOS-COMERCIALES/Consulta.php");
+        $url = ("Consulta.php");
         header("location$url");
         echo "<p>Inicie sesión con credenciales válidas para ir a otras secciones...</p><br>";
     }

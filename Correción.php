@@ -75,32 +75,45 @@
         "<br>"
     );
 
-    $sql = ("INSERT INTO `juguete` (ID, Artículo, Marca, Cantidad, `Precio L`, `Precio ML`, `Precio MS`, `Línea / Serie`, Modelo, Descripción, Barras, SKU)" .
-        " VALUES (" .
+    $sql = ("UPDATE `juguete` SET " .
+        "`ID` = " .
         $ID .
-        ", '" .
-        $Artículo .
-        "', '" .
-        $Marca .
-        "', " .
+        ", " .
+        "`Artículo` = '" .
+        $Artículo . "'" .
+        ", " .
+        "`Marca` = '" .
+        $Marca . "'" .
+        ", " .
+        "`Cantidad` = " .
         $Cantidad .
         ", " .
+        "`Precio L` = " .
         $PrecioL .
         ", " .
+        "`Precio ML` = " .
         $PrecioML .
         ", " .
+        "`Precio MS` = " .
         $PrecioMS .
-        ", '" .
+        ", " .
+        "`Línea / Serie` = '" .
         $LíneaSerie .
-        "', '" .
+        "', " .
+        "Modelo = '" .
         $Modelo .
-        "', '" .
+        "', " .
+        "Descripción = '" .
         $Descripción .
-        "', '" .
+        "', " .
+        "Barras = '" .
         $Barras .
-        "', '" .
+        "', " .
+        "SKU = '" .
         $SKU .
-        "')"
+        "' " .
+        "WHERE `ID` = " .
+        $ID
     );
 
     echo $sql;
@@ -108,9 +121,9 @@
     VALUES (2, 'Cartulina blanca', 'Sin marca', 6.5)"; */
 
     if (mysqli_query($conn, $sql)) {
-        echo "<br>Registro exitoso <br>"; //"New record created successfully";
+        echo "<br>Sustitución exitosa<br>"; //"New record created successfully";
         echo $mensaje;
-        echo "<br>Le reedirigiré al catálogo para que vea los datos agregados...";
+        echo "<br>Le reedirigiré al catálogo para que vea los datos actualizados...";
         header("refresh:5;url=Consulta.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
