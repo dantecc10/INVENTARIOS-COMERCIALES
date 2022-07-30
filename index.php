@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!--<link rel="shortcut icon" href="" type="image/x-icon">!-->
@@ -34,11 +34,6 @@
         <div id="Encabezado-Superior"></div>
         <div id="Encabezado-Inferior"></div>
     </header>
-
-
-
-
-
     <p>Bienvenido, si tiene una cuenta, inicie sesión, de lo contrario, puede consultar el catálogo en el siguiente enlace:
     </p>
     <form action="Inicio de sesión.php" method="POST">
@@ -51,7 +46,7 @@
         <input type="submit">
     </form>
     <?php
-    echo "<script lang='JavaScript'>console.log(Esto fue escrito con PHP...)<script>";
+    echo "<script lang='JavaScript'>console.log('Esto fue escrito con PHP...')<script>";
     ?>
 </body>
 

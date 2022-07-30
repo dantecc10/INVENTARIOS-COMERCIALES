@@ -1,3 +1,89 @@
+table#Catálogo,
+table#Catálogo th,
+table#Catálogo td,
+table#Catálogo tr {
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table#Catálogo th {
+    padding: 5px;
+}
+
+#InputID {
+    width: 50px;
+    text-align: center;
+}
+
+#InputArtículo {
+    width: 200px;
+    text-align: center;
+}
+
+#InputMarca {
+    width: 75px;
+    text-align: center;
+}
+
+#InputCantidad {
+    width: 50px;
+    text-align: center;
+}
+
+#InputPrecioL {
+    width: 50px;
+    text-align: center;
+}
+
+#InputPrecioML {
+    width: 50px;
+    text-align: center;
+}
+
+#InputPrecioMS {
+    width: 50px;
+    text-align: center;
+}
+
+#InputLíneaSerie {
+    width: 50px;
+    text-align: center;
+}
+
+#InputModelo {
+    width: 80px;
+    text-align: center;
+}
+
+#InputDescripción {
+    width: 50px;
+    text-align: center;
+}
+
+#InputBarras {
+    width: 150px;
+    text-align: center;
+}
+
+#InputSKU {
+    width: 150px;
+    text-align: center;
+}
+.CeldaParaID,
+.CeldaParaArtículo,
+.CeldaParaMarca,
+.CeldaParaCantidad,
+.CeldaParaPrecioL,
+.CeldaParaPrecioML,
+.CeldaParaPrecioMS,
+.CeldaParaLíneaSerie,
+.CeldaParaModelo,
+.CeldaParaDescripción,
+.CeldaParaBarras,
+.CeldaParaSKU {
+    padding: 2px;
+}
 #copyright {
     text-align: center;
     color: #2e6583;
@@ -7,7 +93,6 @@
 a.Básica {
     color: #60dbf1;
 }
-
 
 h2#IndicaArtículos {
     color: #07A189;
@@ -93,113 +178,6 @@ div .Descripción-Artículo {
     margin-right: 5%;
 }
 
-img.LogoPartidista {
-    height: 100px;
-    border-radius: 25px;
-    margin: 15px;
-}
-
-img.LogoPartidista#LogoPRI {
-    background-color: white;
-    border-radius: 60px;
-}
-
-img.LogoPartidista#LogoPVEM {
-    background-color: lightgreen;
-    border-radius: 15px;
-}
-
-div#ContenedorListas {
-    padding: 10px;
-    border-radius: 25px;
-    height: 500px;
-    align-items: center;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-div#ContenedorListas h4 {
-    font-weight: 200;
-    color: whitesmoke;
-    font-size: 20px;
-    margin: 5px;
-    text-align: center;
-    width: 100px;
-}
-
-select#Lista1,
-select#Lista2,
-select#Lista3,
-select#Lista4 {
-    text-align: center;
-    color: #07A189;
-    background-color: #dee8f1;
-    width: 50%;
-    font-size: 20px;
-    border-radius: 20px;
-    border: 2px groove white;
-
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-select#Lista1:hover,
-select#Lista2:hover,
-select#Lista3:hover,
-select#Lista4:hover {
-    border: 2px double whitesmoke;
-    color: #0c38e8;
-    background-color: #07A189;
-
-}
-
-table#InsertarResultados,
-table#TablaFiltros {
-    width: 100%;
-}
-
-#InsertarResultados th,
-#InsertarResultados tr,
-#InsertarResultados td,
-#TablaFiltros th,
-#TablaFiltros tr,
-#TablaFiltros td {
-    border: 2px solid #07A189;
-    text-align: center;
-    border-radius: 5px;
-}
-
-#TablaFiltros td,
-#InsertarResultados td {
-    background-color: #004483;
-    color: whitesmoke;
-}
-
-#InsertarResultados th,
-#TablaFiltros th {
-    background-color: #0289c0;
-    color: #011c4b;
-}
-
-.EncabezadoCasilla {
-    width: 15%;
-}
-
-tr {
-    font-size: 20px;
-    height: 30px;
-}
-
-tr#Fila1 {
-    height: 40px;
-    font-size: 20px;
-}
-
-div#MostrarDiputados {
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
 div#RedesSociales {
     align-items: center;
 }
@@ -232,38 +210,6 @@ img.RedSocial#Messenger:hover {
     margin: 2.5px;
 }
 
-img.RedSocial#YouTube,
-img.RedSocial#GitHub,
-img.RedSocial#Facebook {
-    border-radius: 10px;
-}
-
-img.RedSocial#YouTube:hover {
-    width: 50px;
-    height: 50px;
-    margin: 2.5px;
-    ;
-    border-radius: 10px;
-}
-
-img.RedSocial#Telegram:hover {
-    width: 50px;
-    height: 50px;
-    margin: 2.5px;
-}
-
-img.RedSocial#Twitter:hover {
-    width: 50px;
-    height: 50px;
-    margin: 2.5px;
-}
-
-img.RedSocial#GitHub:hover {
-    width: 50px;
-    height: 50px;
-    margin: 2.5px;
-}
-
 hr {
     width: 75%;
     background-color: #041029;
@@ -271,94 +217,4 @@ hr {
     border-color: #07A189;
     border-radius: 5px;
     color: #041029;
-}
-
-table#Catálogo,
-table#Catálogo th,
-table#Catálogo td,
-table#Catálogo tr {
-    text-align: center;
-    border: 1px solid;
-    border-collapse: collapse;
-}
-
-table#Catálogo th {
-    padding: 5px;
-}
-
-#InputID {
-    width: 50px;
-    text-align: center;
-}
-
-#InputArtículo {
-    width: 200px;
-    text-align: center;
-}
-
-#InputMarca {
-    width: 75px;
-    text-align: center;
-}
-
-#InputCantidad {
-    width: 50px;
-    text-align: center;
-}
-
-#InputPrecioL {
-    width: 50px;
-    text-align: center;
-}
-
-#InputPrecioML {
-    width: 50px;
-    text-align: center;
-}
-
-#InputPrecioMS {
-    width: 50px;
-    text-align: center;
-}
-
-#InputLíneaSerie {
-    width: 50px;
-    text-align: center;
-}
-
-#InputModelo {
-    width: 80px;
-    text-align: center;
-}
-
-#InputDescripción {
-    width: 50px;
-    text-align: center;
-}
-
-#InputBarras {
-    width: 150px;
-    text-align: center;
-}
-
-#InputSKU {
-    width: 150px;
-    text-align: center;
-}
-
-
-
-.CeldaParaID,
-.CeldaParaArtículo,
-.CeldaParaMarca,
-.CeldaParaCantidad,
-.CeldaParaPrecioL,
-.CeldaParaPrecioML,
-.CeldaParaPrecioMS,
-.CeldaParaLíneaSerie,
-.CeldaParaModelo,
-.CeldaParaDescripción,
-.CeldaParaBarras,
-.CeldaParaSKU {
-    padding: 2px;
 }
