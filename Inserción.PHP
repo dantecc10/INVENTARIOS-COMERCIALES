@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="Stylesheet" href="CSS/CSS Global - TEMA CLARO.css" Type="text/css" MEDIA="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -103,7 +104,7 @@
         "')"
     );
 
-    echo $sql;
+    //echo $sql;
     /* $sql = "INSERT INTO `papelería-money` (ID, Producto, Marca, Precio)
     VALUES (2, 'Cartulina blanca', 'Sin marca', 6.5)"; */
 

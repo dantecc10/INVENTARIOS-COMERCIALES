@@ -1,75 +1,123 @@
-table#Catálogo,
 table#Catálogo th,
 table#Catálogo td,
 table#Catálogo tr {
     text-align: center;
     border: 1px solid;
+    border-color: #07a189;
     border-collapse: collapse;
+    border-radius: 5px;
 }
 
-table#Catálogo th {
+table#Catálogo tr#Fila1 th {
+    font-size: 20px;
     padding: 5px;
+    background-color: #0289c0;
+}
+
+table#Catálogo tr.FilasProductos {
+    background-color: #004483;
+}
+table#Catálogo tr#FilaFormulario {
+    background-color: #07a189;
 }
 
 #InputID {
     width: 50px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
+    
 }
 
 #InputArtículo {
     width: 200px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputMarca {
     width: 75px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputCantidad {
     width: 50px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputPrecioL {
     width: 50px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputPrecioML {
     width: 50px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputPrecioMS {
     width: 50px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputLíneaSerie {
     width: 50px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputModelo {
     width: 80px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputDescripción {
-    width: 50px;
+    width: 80px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputBarras {
     width: 150px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
 
 #InputSKU {
     width: 150px;
     text-align: center;
+    border-radius: 3px;
+    background-color: #0289c0;
+    color: white;
 }
+
 .CeldaParaID,
 .CeldaParaArtículo,
 .CeldaParaMarca,
@@ -84,6 +132,7 @@ table#Catálogo th {
 .CeldaParaSKU {
     padding: 2px;
 }
+
 #copyright {
     text-align: center;
     color: #2e6583;
@@ -218,3 +267,45 @@ hr {
     border-radius: 5px;
     color: #041029;
 }
+
+
+/*
+CSS TABLA
+table#InsertarResultados,
+    table#TablaFiltros {
+        width: 100%;
+    }
+
+    #InsertarResultados th,
+    #InsertarResultados tr,
+    #InsertarResultados td,
+    #TablaFiltros th,
+    #TablaFiltros tr,
+    #TablaFiltros td {
+        border: 2px solid #07A189;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #TablaFiltros td,
+    #InsertarResultados td {
+        background-color: #004483;
+        color: whitesmoke;
+    }
+
+    #InsertarResultados th,
+    #TablaFiltros th {
+        background-color: #0289c0;
+        color: #011c4b;
+    }
+
+    .EncabezadoCasilla {
+        width: 15%;
+    }
+
+    tr {
+        font-size: 20px;
+        height: 30px;
+    }
+
+*/

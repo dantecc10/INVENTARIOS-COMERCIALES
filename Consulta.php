@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/CSS GLOBAL - TEMA CLARO.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/CuerpoEstilo.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/MenúDesplegable.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/NavBar.css" Type="text/css" MEDIA="screen">
     <script src="JavaScript/AsistentePrecios.js"></script>
     <title>Consulta</title>
 </head>
@@ -37,18 +40,13 @@
     ?>
 
     <p>Filtros:</p>
-
-
-
-
-
     <table id="Catálogo">
         <?php
         $sql = "SELECT * FROM juguete";
         //$result = mysqli_query($conn, $sql);
         $result = mysqli_query($conn, $sql) or die("Error en la consulta a la base de datos");
 
-        echo "<tr>";
+        echo "<tr id='Fila1'>";
         echo "<th class='CeldaParaID'>ID</th>";
         echo "<th class='CeldaParaArtículo'>Artículo</th>";
         echo "<th class='CeldaParaMarca'>Marca</th>";
@@ -64,7 +62,7 @@
         echo "</tr>";
 
         while ($columna = mysqli_fetch_array($result)) {
-            echo "<tr>";
+            echo "<tr class='FilasProductos'>";
             echo "<td class ='CeldaParaID'>" . $columna['ID'] . "</td>";
             echo "<td class ='CeldaParaArtículo'>" . $columna['Artículo'] . "</td>";
             echo "<td class ='CeldaParaMarca'>" . $columna['Marca'] . "</td>";
@@ -79,7 +77,7 @@
             echo "<td class ='CeldaParaSKU'>" . $columna['SKU'] . "</td>";
             echo "</tr>";
         }
-        echo "<tr>";
+        echo "<tr id='FilaFormulario'>";
         echo "<form action='Inserción.php' method='post'>";
         echo "<td class ='CeldaParaID'><input id='InputID' name='ID' type='number' required='' placeholder='ID*'></td>";
         echo "<td class ='CeldaParaArtículo'><input id='InputArtículo' name='Artículo' type='text' required='' placeholder='Artículo*'></th>";
@@ -90,7 +88,7 @@
         echo "<td class ='CeldaParaPrecioMS'>$<input id='InputPrecioMS' name='PrecioMS' type='text' placeholder='Precio MS'></td>";
         echo "<td class ='CeldaParaLíneaSerie'><input id='InputLíneaSerie' name='LíneaSerie' type='text' placeholder='Línea'></th>";
         echo "<td class ='CeldaParaModelo'><input id='InputModelo' name='Modelo' type='text' required='' placeholder='Modelo*'></td>";
-        echo "<td class ='CeldaParaDescripción'><input id='InputDescripción' name='Descripción' type='text' placeholder='Descripción del artículo'></td>";
+        echo "<td class ='CeldaParaDescripción'><input id='InputDescripción' name='Descripción' type='text' placeholder='Descripción'></td>";
         echo "<td class ='CeldaParaBarras'><input id='InputBarras' name='Barras' type='text' required='' placeholder='Código de barras*'></td>";
         echo "<td class ='CeldaParaSKU'><input id='InputSKU' name='SKU' type='text' placeholder='Código universal de producto (SKU)'></td>";
 
