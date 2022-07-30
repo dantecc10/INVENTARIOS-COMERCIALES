@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,7 @@ require_once("Conexión.php");
     $sql = "SELECT * FROM juguete";
     //$result = mysqli_query($conn, $sql);
     $result = mysqli_query($conn, $sql) or die("Error en la consulta a la base de datos");
+
     echo "<tr>";
     echo "<th .AnchoTablaID>ID</th>";
     echo "<th>Artículo</th>";
@@ -50,7 +51,7 @@ require_once("Conexión.php");
     }
     echo "<tr>";
     echo "<form action='Registro.php' method='post'>";
-    echo "<td><input id='InputID' name='ID' type='number' required='' placeholder='Identificador de lista*'></td>";
+    echo "<td><input id='InputID' name='ID' type='number' required='' placeholder='ID*'></td>";
     echo "<td><input id='InputArtículo' name='Artículo' type='text' required='' placeholder='Artículo*'></th>";
     echo "<td><input id='InputMarca' name='Marca' type='text' required='' placeholder='Marca del artículo*'></td>";
     echo "<td><input id='InputCantidad' name='Cantidad' type='number' required='' placeholder='Existencias del producto*'></td>";
@@ -65,7 +66,6 @@ require_once("Conexión.php");
     echo "<input type='submit'>";
     echo "</form>";
     echo "</tr>";
-    
     ?>
 </table>
 </body>
