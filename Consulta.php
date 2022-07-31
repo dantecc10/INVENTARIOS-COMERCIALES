@@ -83,9 +83,9 @@
         echo "<td class ='CeldaParaArtículo'><input id='InputArtículo' name='Artículo' type='text' required='' placeholder='Artículo*'></th>";
         echo "<td class ='CeldaParaMarca'><input id='InputMarca' name='Marca' type='text' required='' placeholder='Marca*'></td>";
         echo "<td class ='CeldaParaCantidad'><input id='InputCantidad' name='Cantidad' type='number' required='' placeholder='Existencia*'></td>";
-        echo "<td class ='CeldaParaPrecioL'>$<input id='InputPrecioL' onchange='javascript:CálculoAsistidoDePrecios()' name='PrecioL' type='text' required='' placeholder='Precio*'></td>";
-        echo "<td class ='CeldaParaPrecioML'>$<input id='InputPrecioML' name='PrecioML' type='text' required='' placeholder='Precio ML*'></td>";
-        echo "<td class ='CeldaParaPrecioMS'>$<input id='InputPrecioMS' name='PrecioMS' type='text' placeholder='Precio MS'></td>";
+        echo "<td class ='CeldaParaPrecioL'>$<input id='InputPrecioL' onchange='javascript:CálculoAsistidoDePrecios()' name='PrecioL' type='number' step='any' required='' placeholder='Precio*'></td>";
+        echo "<td class ='CeldaParaPrecioML'>$<input id='InputPrecioML' name='PrecioML' type='number' step='any' required='' placeholder='Precio ML*'></td>";
+        echo "<td class ='CeldaParaPrecioMS'>$<input id='InputPrecioMS' name='PrecioMS' type='number' step='any' placeholder='Precio MS'></td>";
         echo "<td class ='CeldaParaLíneaSerie'><input id='InputLíneaSerie' name='LíneaSerie' type='text' placeholder='Línea'></th>";
         echo "<td class ='CeldaParaModelo'><input id='InputModelo' name='Modelo' type='text' required='' placeholder='Modelo*'></td>";
         echo "<td class ='CeldaParaDescripción'><input id='InputDescripción' name='Descripción' type='text' placeholder='Descripción'></td>";
