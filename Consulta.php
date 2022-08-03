@@ -9,7 +9,7 @@
     <link rel="Stylesheet" href="CSS/TEMA CLARO/CuerpoEstilo.css" Type="text/css" MEDIA="screen">
     <link rel="Stylesheet" href="CSS/TEMA CLARO/MenúDesplegable.css" Type="text/css" MEDIA="screen">
     <link rel="Stylesheet" href="CSS/TEMA CLARO/NavBar.css" Type="text/css" MEDIA="screen">
-    <script src="JavaScript/AsistentePrecios.js"></script>
+
     <title>Consulta</title>
 </head>
 
@@ -40,6 +40,45 @@
     ?>
 
     <p>Filtros:</p>
+    <table id="TablaFiltros">
+        <tr id="EncabezadosFiltros">
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Línea o serie</th>
+            <th>Modelo</th>
+            <th>Barras</th>
+            <th>SKU</th>
+        </tr>
+        <tr id="InputsFiltros">
+            <td id="BúsquedaID">
+                <input type="number" name="CapturaID" id="CampoFiltroID" placeholder="ID" onchange="">
+            </td>
+            <td>
+                <select name="CapturaMarca" id="CampoFiltroMarca" onchange="">
+                    <option value="Todas">Todas</option>
+                    <option value="Playmobil">Playmobil</option>
+                    <option value="LEGO">LEGO</option>
+                </select>
+            </td>
+            <td id="BúsquedaLíneaSerie">
+                <input type="text" name="CapturaLíneaSerie" id="CampoFiltroLíneaSerie" placeholder="Línea o serie" onchange="">
+            </td>
+            <td id="BúsquedaModelo">
+                <input type="text" name="CapturaModelo" id="CampoFiltroModelo" placeholder="Modelo del artículo" onchange="">
+            </td>
+            <td id="BúsquedaBarras">
+                <input type="text" name="CapturaBarras" id="CampoFiltroBarras" placeholder="Código de barras" onchange="">
+            </td>
+            <td id="BúsquedaSKU">
+                <input type="text" name="CapturaSKU" id="CampoFiltroSKU" placeholder="SKU" onchange="">
+            </td>
+        </tr>
+    </table>
+
+    <button class="BotónEstándar" onclick="javascript:LimpiarFiltros();">Limpiar filtros</button>
+    <hr>
+
+
     <table id="Catálogo">
         <?php
         $sql = "SELECT * FROM juguete";
@@ -62,36 +101,35 @@
         echo "</tr>";
 
         while ($columna = mysqli_fetch_array($result)) {
-            echo "<tr class='FilasProductos'>";
-            echo "<td class ='CeldaParaID'>" . $columna['ID'] . "</td>";
-            echo "<td class ='CeldaParaArtículo'>" . $columna['Artículo'] . "</td>";
-            echo "<td class ='CeldaParaMarca'>" . $columna['Marca'] . "</td>";
-            echo "<td class ='CeldaParaCantidad'>" . $columna['Cantidad'] . "</td>";
-            echo "<td class ='CeldaParaPrecioL'>$" . $columna['Precio L'] . "</td>";
-            echo "<td class ='CeldaParaPrecioML'>$" . $columna['Precio ML'] . "</td>";
-            echo "<td class ='CeldaParaPrecioMS'>$" . $columna['Precio MS'] . "</td>";
-            echo "<td class ='CeldaParaLíneaSerie'>" . $columna['Línea / Serie'] . "</td>";
-            echo "<td class ='CeldaParaModelo'>" . $columna['Modelo'] . "</td>";
-            echo "<td class ='CeldaParaDescripción'>" . $columna['Descripción'] . "</td>";
-            echo "<td class ='CeldaParaBarras'>" . $columna['Barras'] . "</td>";
-            echo "<td class ='CeldaParaSKU'>" . $columna['SKU'] . "</td>";
+            echo "<tr class=' FilasProductos'>";
+            echo "<td class = 'CeldaParaID'>" . $columna['ID'] . "</td>";
+            echo "<td class = 'CeldaParaArtículo'>" . $columna['Artículo'] . "</td>";
+            echo "<td class = 'CeldaParaMarca'>" . $columna['Marca'] . "</td>";
+            echo "<td class = 'CeldaParaCantidad'>" . $columna['Cantidad'] . "</td>";
+            echo "<td class = 'CeldaParaPrecioL'>$" . $columna['Precio L'] . "</td>";
+            echo "<td class = 'CeldaParaPrecioML'>$" . $columna['Precio ML'] . "</td>";
+            echo "<td class = 'CeldaParaPrecioMS'>$" . $columna['Precio MS'] . "</td>";
+            echo "<td class = 'CeldaParaLíneaSerie'>" . $columna['Línea / Serie'] . "</td>";
+            echo "<td class = 'CeldaParaModelo'>" . $columna['Modelo'] . "</td>";
+            echo "<td class = 'CeldaParaDescripción'>" . $columna['Descripción'] . "</td>";
+            echo "<td class = 'CeldaParaBarras'>" . $columna['Barras'] . "</td>";
+            echo "<td class = 'CeldaParaSKU'>" . $columna['SKU'] . "</td>";
             echo "</tr>";
         }
         echo "<tr id='FilaFormulario'>";
-        echo "<form action='Inserción.php' method='post'>";
-        echo "<td class ='CeldaParaID'><input id='InputID' name='ID' type='number' required='' placeholder='ID*'></td>";
-        echo "<td class ='CeldaParaArtículo'><input id='InputArtículo' name='Artículo' type='text' required='' placeholder='Artículo*'></th>";
-        echo "<td class ='CeldaParaMarca'><input id='InputMarca' name='Marca' type='text' required='' placeholder='Marca*'></td>";
-        echo "<td class ='CeldaParaCantidad'><input id='InputCantidad' name='Cantidad' type='number' required='' placeholder='Existencia*'></td>";
-        echo "<td class ='CeldaParaPrecioL'>$<input id='InputPrecioL' onchange='javascript:CálculoAsistidoDePrecios()' name='PrecioL' type='number' step='any' required='' placeholder='Precio*'></td>";
-        echo "<td class ='CeldaParaPrecioML'>$<input id='InputPrecioML' name='PrecioML' type='number' step='any' required='' placeholder='Precio ML*'></td>";
-        echo "<td class ='CeldaParaPrecioMS'>$<input id='InputPrecioMS' name='PrecioMS' type='number' step='any' placeholder='Precio MS'></td>";
-        echo "<td class ='CeldaParaLíneaSerie'><input id='InputLíneaSerie' name='LíneaSerie' type='text' placeholder='Línea'></th>";
-        echo "<td class ='CeldaParaModelo'><input id='InputModelo' name='Modelo' type='text' required='' placeholder='Modelo*'></td>";
-        echo "<td class ='CeldaParaDescripción'><input id='InputDescripción' name='Descripción' type='text' placeholder='Descripción'></td>";
-        echo "<td class ='CeldaParaBarras'><input id='InputBarras' name='Barras' type='text' required='' placeholder='Código de barras*'></td>";
-        echo "<td class ='CeldaParaSKU'><input id='InputSKU' name='SKU' type='text' placeholder='Código universal de producto (SKU)'></td>";
-
+        echo "<form action = 'Inserción.php' method='post'>";
+        echo "<td class = 'CeldaParaID'><input id='InputID' name='ID' type='number' required='' placeholder='ID*'></td>";
+        echo "<td class = 'CeldaParaArtículo'><input id='InputArtículo' name='Artículo' type='text' required='' placeholder='Artículo*'></th>";
+        echo "<td class = 'CeldaParaMarca'><input id='InputMarca' name='Marca' type='text' required='' placeholder='Marca*'></td>";
+        echo "<td class = 'CeldaParaCantidad'><input id='InputCantidad' name='Cantidad' type='number' required='' placeholder='Existencia*'></td>";
+        echo "<td class = 'CeldaParaPrecioL'><label for='PrecioML'>$</label><input id='InputPrecioL' onchange='javascript:CálculoAsistidoDePrecios()' name='PrecioL' type='number' step='any' required='' placeholder='Precio*'></td>";
+        echo "<td class = 'CeldaParaPrecioML'><label for='PrecioML'>$</label><input id='InputPrecioML' name='PrecioML' type='number' step='any' required='' placeholder='Precio ML*'></td>";
+        echo "<td class = 'CeldaParaPrecioMS'><label for='PrecioML'>$</label><input id='InputPrecioMS' name='PrecioMS' type='number' step='any' placeholder='Precio MS'></td>";
+        echo "<td class = 'CeldaParaLíneaSerie'><input id='InputLíneaSerie' name='LíneaSerie' type='text' placeholder='Línea'></th>";
+        echo "<td class = 'CeldaParaModelo'><input id='InputModelo' name='Modelo' type='text' required='' placeholder='Modelo*'></td>";
+        echo "<td class = 'CeldaParaDescripción'><input id='InputDescripción' name='Descripción' type='text' placeholder='Descripción'></td>";
+        echo "<td class = 'CeldaParaBarras'><input id='InputBarras' name='Barras' type='text' required='' placeholder='Código de barras*'></td>";
+        echo "<td class = 'CeldaParaSKU'><input id='InputSKU' name='SKU' type='text' placeholder='Código universal de producto (SKU)'></td>";
         echo "</tr>";
         ?>
 
@@ -100,6 +138,7 @@
         ?>
 
     </table>
+    <script src="JavaScript/AsistenteLlenadoFormulario.js"></script>
     <?php
     echo "<input type='submit'>";
     echo "</form>";

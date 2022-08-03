@@ -1,28 +1,53 @@
+/*
+Reglas CSS para tabla con resultados de consulta y fila para inserción / actualización de datos
+*/
+table#Catálogo {
+    width: 95%;
+    margin: 0% 2.5% 0% 2.5%;
+}
+
 table#Catálogo th,
 table#Catálogo td,
 table#Catálogo tr {
     text-align: center;
-    border: 1px solid;
+    border: 3px solid;
     border-color: #07a189;
     border-collapse: collapse;
     border-radius: 5px;
 }
 
+.CeldaParaPrecioL,
+.CeldaParaPrecioML,
+.CeldaParaPrecioMS {
+    width: 75px;
+}
+
+::placeholder {
+    color: white;
+    text-decoration: dotted;
+    font-size: 12px;
+    text-align: center;
+}
+
 table#Catálogo tr#Fila1 th {
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px;
     background-color: #0289c0;
+    color: #011c4b;
 }
 
 table#Catálogo tr.FilasProductos {
     background-color: #004483;
+    color: white;
 }
+
 table#Catálogo tr#FilaFormulario {
     background-color: #07a189;
+    color: white;
 }
 
 #InputID {
-    width: 50px;
+    width: 30px;
     text-align: center;
     border-radius: 3px;
     background-color: #0289c0;
@@ -46,7 +71,7 @@ table#Catálogo tr#FilaFormulario {
 }
 
 #InputCantidad {
-    width: 50px;
+    width: 70px;
     text-align: center;
     border-radius: 3px;
     background-color: #0289c0;
@@ -86,7 +111,7 @@ table#Catálogo tr#FilaFormulario {
 }
 
 #InputModelo {
-    width: 80px;
+    width: 70px;
     text-align: center;
     border-radius: 3px;
     background-color: #0289c0;
@@ -102,7 +127,7 @@ table#Catálogo tr#FilaFormulario {
 }
 
 #InputBarras {
-    width: 150px;
+    width: 120px;
     text-align: center;
     border-radius: 3px;
     background-color: #0289c0;
@@ -110,7 +135,7 @@ table#Catálogo tr#FilaFormulario {
 }
 
 #InputSKU {
-    width: 150px;
+    width: 120px;
     text-align: center;
     border-radius: 3px;
     background-color: #0289c0;
@@ -130,6 +155,71 @@ table#Catálogo tr#FilaFormulario {
 .CeldaParaBarras,
 .CeldaParaSKU {
     padding: 2px;
+}
+
+/*CSS para tabla de filtros*/
+#TablaFiltros {
+    width: 95%;
+    margin: 0% 2.5% 0% 2.5%;
+}
+
+#TablaFiltros th,
+#TablaFiltros td {
+    text-align: center;
+    border: 3px solid;
+    border-color: #07a189;
+    border-collapse: collapse;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#TablaFiltros #EncabezadosFiltros {
+    background-color: #0289c0;
+    color: #011c4b;
+    font-size: 18px;
+}
+
+#TablaFiltros #InputsFiltros {
+    background-color: #004483;
+    color: white;
+}
+
+#CampoFiltroID,
+#CampoFiltroMarca,
+#CampoFiltroLíneaSerie,
+#CampoFiltroModelo,
+#CampoFiltroBarras,
+#CampoFiltroSKU {
+    background-color: #07a189;
+    border-radius: 5px;
+    color: white;
+}
+
+/*
+#CampoFiltroID,
+#CampoFiltroLíneaSerie ::placeholder,
+#CampoFiltroModelo ::placeholder,
+#CampoFiltroBarras ::placeholder,
+#CampoFiltroSKU ::placeholder{
+    color: white;
+    text-align: center;
+
+}
+*/
+
+#CampoFiltroID {
+    width: 70px;
+}
+
+/*Estilos de texto*/
+
+.BotónEstándar {
+    background-color: #004483;
+    border: 3px solid;
+    border-color: #07a189;
+    border-radius: 5px;
+    color: #0289c0;
+    margin: 0% 0% 0% 2.6%;
 }
 
 #copyright {

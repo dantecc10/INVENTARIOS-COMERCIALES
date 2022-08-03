@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/CSS GLOBAL - TEMA CLARO.css" Type="text/css" MEDIA="screen">
-    <script src="JavaScript/AsistentePrecios.js"></script>
+    <script src="JavaScript/AsistenteLlenadoFormulario.js"></script>
     <title>Consulta</title>
 </head>
 
