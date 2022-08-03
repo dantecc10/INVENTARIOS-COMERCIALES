@@ -9,7 +9,7 @@
     <link rel="Stylesheet" href="CSS/TEMA CLARO/CuerpoEstilo.css" Type="text/css" MEDIA="screen">
     <link rel="Stylesheet" href="CSS/TEMA CLARO/MenúDesplegable.css" Type="text/css" MEDIA="screen">
     <link rel="Stylesheet" href="CSS/TEMA CLARO/NavBar.css" Type="text/css" MEDIA="screen">
-
+    <script src="JavaScript/AJAX.js"></script>
     <title>Consulta</title>
 </head>
 
@@ -38,6 +38,17 @@
     <?php
     require_once("Conexión.php");
     ?>
+    <form>
+        <select name="users" onchange="javascript:showUser(this.value)" id="DesplegableIDs">
+            <option value="">Selecciona un producto:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </form>
+    <br>
+    <div id="txtHint">Dante</div>
 
     <p>Filtros:</p>
     <table id="TablaFiltros">
@@ -79,7 +90,7 @@
     <hr>
 
 
-    <table id="Catálogo">
+    <table class="Catálogo">
         <?php
         $sql = "SELECT * FROM juguete";
         //$result = mysqli_query($conn, $sql);
@@ -132,11 +143,6 @@
         echo "<td class = 'CeldaParaSKU'><input id='InputSKU' name='SKU' type='text' placeholder='Código universal de producto (SKU)'></td>";
         echo "</tr>";
         ?>
-
-        <?php
-
-        ?>
-
     </table>
     <script src="JavaScript/AsistenteLlenadoFormulario.js"></script>
     <?php

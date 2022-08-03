@@ -42,7 +42,7 @@
 
 
 
-    <table id="Catálogo">
+    <table class="Catálogo">
         <?php
         $sql = "SELECT * FROM juguete";
         //$result = mysqli_query($conn, $sql);

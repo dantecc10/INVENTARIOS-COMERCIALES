@@ -1,14 +1,14 @@
 /*
 Reglas CSS para tabla con resultados de consulta y fila para inserción / actualización de datos
 */
-table#Catálogo {
+table.Catálogo {
     width: 95%;
     margin: 0% 2.5% 0% 2.5%;
 }
 
-table#Catálogo th,
-table#Catálogo td,
-table#Catálogo tr {
+table.Catálogo th,
+table.Catálogo td,
+table.Catálogo tr {
     text-align: center;
     border: 3px solid;
     border-color: #07a189;
@@ -29,19 +29,19 @@ table#Catálogo tr {
     text-align: center;
 }
 
-table#Catálogo tr#Fila1 th {
+table.Catálogo tr#Fila1 th {
     font-size: 18px;
     padding: 5px;
     background-color: #0289c0;
     color: #011c4b;
 }
 
-table#Catálogo tr.FilasProductos {
+table.Catálogo tr.FilasProductos {
     background-color: #004483;
     color: white;
 }
 
-table#Catálogo tr#FilaFormulario {
+table.Catálogo tr#FilaFormulario {
     background-color: #07a189;
     color: white;
 }

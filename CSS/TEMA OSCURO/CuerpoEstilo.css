@@ -1,13 +1,13 @@
-table#Catálogo,
-table#Catálogo th,
-table#Catálogo td,
-table#Catálogo tr {
+table.Catálogo,
+table.Catálogo th,
+table.Catálogo td,
+table.Catálogo tr {
     text-align: center;
     border: 1px solid;
     border-collapse: collapse;
 }
 
-table#Catálogo th {
+table.Catálogo th {
     padding: 5px;
 }
 
