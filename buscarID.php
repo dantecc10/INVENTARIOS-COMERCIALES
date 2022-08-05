@@ -2,23 +2,6 @@
 <html>
 
 <head>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    table,
-    td,
-    th {
-      border: 1px solid black;
-      padding: 5px;
-    }
-
-    th {
-      text-align: left;
-    }
-  </style>
 </head>
 
 <body>
@@ -37,7 +20,7 @@
   echo "<table class='Catálogo'>";
   $result = mysqli_query($con, $sql) or die("Error en la consulta a la base de datos");
 
-  echo "<tr id='Fila1'>";
+  echo "<tr class='Fila1'>";
   echo "<th class='CeldaParaID'>ID</th>";
   echo "<th class='CeldaParaArtículo'>Artículo</th>";
   echo "<th class='CeldaParaMarca'>Marca</th>";

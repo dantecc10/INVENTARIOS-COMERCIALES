@@ -1,9 +1,9 @@
 var NuevoID = (document.getElementsByClassName("CeldaParaID").length) - 1;
 var opciones = (document.getElementsByClassName("CeldaParaID").length) - 2;
 document.getElementById("InputID").value = NuevoID;
-document.getElementById("DesplegableIDs").innerHTML = ("");
-document.getElementById("DesplegableIDs").innerHTML += ("<option value='0'>Seleccione un ID</option>");
-//Letal - Adevertencia: Descomentar las siguientes 3 líneas genera un bucle que impide la carga de la página
+//document.getElementById("DesplegableIDs").innerHTML = ("");
+//document.getElementById("DesplegableIDs").innerHTML += ("<option value='0'>Seleccione un ID</option>");
+//Letal - Advertencia: Descomentar las siguientes 3 líneas genera un bucle que impide la carga de la página !!!
 //for (var i = 1; i = opciones; i++) {
 //    document.getElementById("DesplegableIDs").innerHTML += ("<option value=" + "'" + i + "'>" + i + "</option>");
 //}
