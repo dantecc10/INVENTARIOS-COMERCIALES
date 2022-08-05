@@ -21,18 +21,19 @@
     if (!$conn) {
         die("<p>Error al conectar con la base de datos: " . mysqli_connect_error() . "</p><p>Pruebe a verificar la conexión del servidor...</p>");
     }
-    echo "<p>Conexión a la base de datos: Exitosa</p>";
+    echo "<script>console.log('Conexión a la base de datos: Exitosa')</script>";
     ?>
-
-    <p>¿Qué desea realizar? Se requiere inicio de sesión previo.</p>
-    <form action="Revisión.php" method="post">
-        <select name="Acción"> <?php //Corregir?>
-            <option value="Registro">Registro</option>
-            <option value="Actualización">Actualización</option>
-            <option value="Venta">Venta</option>
-        </select>
-        <input type="submit">
-    </form>
+    <!-- 
+        <p>¿Qué desea realizar? Se requiere inicio de sesión previo.</p>
+        <form action="Revisión.php" method="post">
+            <select name="Acción" class="BotónEstándar">
+                <option value="Registro">Registro</option>
+                <option value="Actualización">Actualización</option>
+                <option value="Venta">Venta</option>
+            </select>
+            <input type="submit" class="BotónEstándar">
+        </form>
+    !-->
 </body>
 
 </html>

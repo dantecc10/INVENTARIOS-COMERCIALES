@@ -29,7 +29,7 @@ table.Catálogo tr {
     text-align: center;
 }
 
-table.Catálogo tr#Fila1 th {
+table.Catálogo tr.Fila1 th {
     font-size: 18px;
     padding: 5px;
     background-color: #0289c0;
@@ -218,7 +218,7 @@ table.Catálogo tr#FilaFormulario {
     border: 3px solid;
     border-color: #07a189;
     border-radius: 5px;
-    color: #0289c0;
+    color: white;
     margin: 0% 0% 0% 2.6%;
 }
 
