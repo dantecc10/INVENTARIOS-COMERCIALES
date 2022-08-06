@@ -1,4 +1,5 @@
-str = document.getElementById("DesplegableIDs").textContent;
+str = document.getElementById("DesplegableIDs").value;
+console.log(str);
 function mostrarProducto(str) {
   if (str == "") {
     document.getElementById("DivTablaID").innerHTML = "";

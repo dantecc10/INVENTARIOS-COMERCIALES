@@ -1,3 +1,4 @@
+var ModoFiltro;
 function FiltrarProductos() {
     var ID = document.getElementById("CampoFiltroID").value;
     var Marca = document.getElementById("CampoFiltroMarca").value;
@@ -11,9 +12,8 @@ function FiltrarProductos() {
     } else {
         var urlCompuesta, urlVariables = "", uriPHP;
         uriPHP = "Filtrar.php";
-        urlVariables = ("?ID=" + ID + "&Marca=" + Marca + "&LíneaSerie=" + LíneaSerie + "&Modelo=" + Modelo + "&Barras=" + Barras + "&SKU=" + SKU);
+        urlVariables = ("?ID=" + ID + "&Marca=" + Marca + "&LíneaSerie=" + LíneaSerie + "&Modelo=" + Modelo + "&Barras=" + Barras + "&SKU=" + SKU + "&ModoFiltro=" + ModoFiltro);
         urlCompuesta = (uriPHP + urlVariables);
-
 
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
@@ -22,7 +22,8 @@ function FiltrarProductos() {
             }
         };
         xmlhttp.open("GET", urlCompuesta, true);
-        console.log("URL: " + urlCompuesta + "\nURL Variables: " + urlVariables)
+        console.log("URL: " + urlCompuesta + "\nURL Variables: " + urlVariables);
+        console.log("ModoFiltro: " + ModoFiltro);
         xmlhttp.send();
     }
 }

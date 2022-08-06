@@ -11,6 +11,7 @@
     <link rel="Stylesheet" href="CSS/TEMA CLARO/NavBar.css" Type="text/css" MEDIA="screen">
     <script src="JavaScript/AJAX.js"></script>
     <script src="JavaScript/AjaxFiltros.js"></script>
+    <link rel="icon" href="IMG/El Mundo del Regalo - LOGO.png">
     <title>Consulta</title>
 </head>
 
@@ -50,7 +51,7 @@
         </select>
     </form>
     <br>
-    <div id="DivTablaID">Dante</div>
+    <div id="DivTablaID"></div>
 
     <p>Filtros:</p>
     <table id="TablaFiltros">
@@ -65,26 +66,26 @@
         <form>
             <tr id="InputsFiltros">
                 <td id="BúsquedaID">
-                    <input type="number" name="CapturaID" id="CampoFiltroID" placeholder="ID" onchange="javascript:FiltrarProductos()">
+                    <input type="number" name="CapturaID" id="CampoFiltroID" placeholder="ID" onchange="javascript:FiltrarProductos(ModoFiltro = 'ID')">
                 </td>
                 <td>
-                    <select name="CapturaMarca" id="CampoFiltroMarca" onclick="javascript:FiltrarProductos();">
+                    <select name="CapturaMarca" id="CampoFiltroMarca" onclick="javascript:FiltrarProductos(ModoFiltro = 'Marca');">
                         <option value="Todas">Todas</option>
                         <option value="Playmobil">Playmobil</option>
                         <option value="LEGO">LEGO</option>
                     </select>
                 </td>
                 <td id="BúsquedaLíneaSerie">
-                    <input type="text" name="CapturaLíneaSerie" id="CampoFiltroLíneaSerie" placeholder="Línea o serie" onclick="javascript:FiltrarProductos();">
+                    <input type="text" name="CapturaLíneaSerie" id="CampoFiltroLíneaSerie" placeholder="Línea o serie" onclick="javascript:FiltrarProductos(ModoFiltro = 'LíneaSerie');">
                 </td>
                 <td id="BúsquedaModelo">
-                    <input type="text" name="CapturaModelo" id="CampoFiltroModelo" placeholder="Modelo del artículo" onclick="javascript:FiltrarProductos();">
+                    <input type="text" name="CapturaModelo" id="CampoFiltroModelo" placeholder="Modelo del artículo" onclick="javascript:FiltrarProductos(ModoFiltro = 'Modelo');">
                 </td>
                 <td id="BúsquedaBarras">
-                    <input type="text" name="CapturaBarras" id="CampoFiltroBarras" placeholder="Código de barras" onclick="javascript:FiltrarProductos();">
+                    <input type="text" name="CapturaBarras" id="CampoFiltroBarras" placeholder="Código de barras" onclick="javascript:FiltrarProductos(ModoFiltro = 'Barras');">
                 </td>
                 <td id="BúsquedaSKU">
-                    <input type="text" name="CapturaSKU" id="CampoFiltroSKU" placeholder="SKU" onclick="javascript:FiltrarProductos();">
+                    <input type="text" name="CapturaSKU" id="CampoFiltroSKU" placeholder="SKU" onclick="javascript:FiltrarProductos(ModoFiltro = 'SKU');">
                 </td>
             </tr>
     </table>

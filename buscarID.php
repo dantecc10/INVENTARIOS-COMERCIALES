@@ -14,9 +14,7 @@
     die('Could not connect: ' . mysqli_connect_error($con));
   }
 
-  $sql = "SELECT * FROM juguete WHERE ID = '" . $q . "'";
-  $result = mysqli_query($con, $sql);
-
+  $sql = "SELECT * FROM juguete WHERE `ID` = '" . $q . "'";
   echo "<table class='Catálogo'>";
   $result = mysqli_query($con, $sql) or die("Error en la consulta a la base de datos");
 
