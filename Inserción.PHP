@@ -4,13 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="Stylesheet" href="CSS/CSS Global - TEMA CLARO.css" Type="text/css" MEDIA="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="CSS/CSS GLOBAL - TEMA CLARO.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/CuerpoEstilo.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/MenúDesplegable.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/NavBar.css" Type="text/css" MEDIA="screen">
+    <script src="JavaScript/AJAX.js"></script>
+    <script src="JavaScript/AjaxFiltros.js"></script>
     <link rel="icon" href="IMG/El Mundo del Regalo - LOGO.png">
-    <title>Document</title>
+    <title>Nuevo producto</title>
 </head>
 
 <body>
+    <header id="Encabezado">
+        <div id="Contenedor-Encabezado">
+            <div id="Contenido-Encabezado">
+                <h1>El Mundo del Regalo</h1>
+                <div id="DivLOGO">
+                    <a href="index.php">
+                        <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
+                    </a>
+                </div>
+                <div class="Menú-Desplegable"> <button class="Botón-Desplegar">Menú</button>
+                    <div class="Contenido-Desplegable">
+                        <a href="Consulta.php">Consultar productos</a>
+                        <a href="Registro.php">Registro</a>
+                        <a href="Actualización.php">Actualización</a>
+                        <a href="Venta.php">Venta</a>
+                        <a id="CambiaTema" onclick="javascript:CambiarTemaPrincipal()">Cambiar tema</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Encabezado-Superior"></div>
+        <div id="Encabezado-Inferior"></div>
+    </header>
+
     <?php
     require_once('Conexión.php');
 
@@ -78,19 +107,19 @@
     );
     //$result = mysqli_query($conn, $sql);
     $sql = ("INSERT INTO `juguete` (ID, Artículo, Marca, Cantidad, `Precio L`, `Precio ML`, `Precio MS`, `Línea / Serie`, Modelo, Descripción, Barras, SKU)" .
-    " VALUES (" .
-    $ID .
-    ", '" .
-    $Artículo .
-    "', '" .
-    $Marca .
-    "', " .
-    $Cantidad .
-    ", " .
-    $PrecioL .
-    ", " .
-    $PrecioML .
-    ", " .
+        " VALUES (" .
+        $ID .
+        ", '" .
+        $Artículo .
+        "', '" .
+        $Marca .
+        "', " .
+        $Cantidad .
+        ", " .
+        $PrecioL .
+        ", " .
+        $PrecioML .
+        ", " .
         $PrecioMS .
         ", '" .
         $LíneaSerie .
@@ -104,7 +133,7 @@
         $SKU .
         "')"
     );
-//    $result = mysqli_query($conn, $sql) or die("Error en la consulta a la base de datos");
+    //    $result = mysqli_query($conn, $sql) or die("Error en la consulta a la base de datos");
     if (mysqli_query($conn, $sql)) {
         echo "<br>Registro exitoso <br>"; //"New record created successfully";
         echo "<br>Le reedirigiré al catálogo para que vea los datos agregados...";
@@ -143,8 +172,8 @@
         header("refresh:8;url=Consulta.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        header("refresh:8;url=Consulta.php");
     }
-    
     ?>
     <script src="JavaScript/AjaxFiltros.js"></script>
 </body>

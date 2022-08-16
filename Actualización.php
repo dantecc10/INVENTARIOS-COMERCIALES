@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/CSS GLOBAL - TEMA CLARO.css" Type="text/css" MEDIA="screen">
-    <script src="JavaScript/AsistenteLlenadoFormulario.js"></script>
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/CuerpoEstilo.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/MenúDesplegable.css" Type="text/css" MEDIA="screen">
+    <link rel="Stylesheet" href="CSS/TEMA CLARO/NavBar.css" Type="text/css" MEDIA="screen">
+    <script src="JavaScript/AJAX.js"></script>
+    <script src="JavaScript/AjaxFiltros.js"></script>
     <link rel="icon" href="IMG/El Mundo del Regalo - LOGO.png">
-    <title>Consulta</title>
+    <title>Actualización</title>
 </head>
 
 <body>
@@ -16,9 +20,11 @@
         <div id="Contenedor-Encabezado">
             <div id="Contenido-Encabezado">
                 <h1>El Mundo del Regalo</h1>
-                <a href="index.php">
-                    <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
-                </a>
+                <div id="DivLOGO">
+                    <a href="index.php">
+                        <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
+                    </a>
+                </div>
                 <div class="Menú-Desplegable"> <button class="Botón-Desplegar">Menú</button>
                     <div class="Contenido-Desplegable">
                         <a href="Consulta.php">Consultar productos</a>
@@ -36,20 +42,14 @@
     <?php
     require_once("Conexión.php");
     ?>
-
-    <p>Filtros:</p>
-
-
-
-
-
+    <br>
     <table class="Catálogo">
         <?php
         $sql = "SELECT * FROM juguete";
         //$result = mysqli_query($conn, $sql);
         $result = mysqli_query($conn, $sql) or die("Error en la consulta a la base de datos");
 
-        echo "<tr>";
+        echo "<tr class='Fila1'>";
         echo "<th class='CeldaParaID'>ID</th>";
         echo "<th class='CeldaParaArtículo'>Artículo</th>";
         echo "<th class='CeldaParaMarca'>Marca</th>";
@@ -65,7 +65,7 @@
         echo "</tr>";
 
         while ($columna = mysqli_fetch_array($result)) {
-            echo "<tr>";
+            echo "<tr class='FilasProductos'>";
             echo "<td class ='CeldaParaID'>" . $columna['ID'] . "</td>";
             echo "<td class ='CeldaParaArtículo'>" . $columna['Artículo'] . "</td>";
             echo "<td class ='CeldaParaMarca'>" . $columna['Marca'] . "</td>";
@@ -99,7 +99,7 @@
         ?>
 
         <?php
-            
+
         ?>
 
     </table>

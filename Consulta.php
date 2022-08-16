@@ -16,13 +16,16 @@
 </head>
 
 <body>
+    <br>
     <header id="Encabezado">
         <div id="Contenedor-Encabezado">
             <div id="Contenido-Encabezado">
                 <h1>El Mundo del Regalo</h1>
-                <a href="index.php">
-                    <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
-                </a>
+                <div id="DivLOGO">
+                    <a href="index.php">
+                        <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
+                    </a>
+                </div>
                 <div class="Menú-Desplegable"> <button class="Botón-Desplegar">Menú</button>
                     <div class="Contenido-Desplegable">
                         <a href="Consulta.php">Consultar productos</a>
@@ -51,7 +54,6 @@
         </select>
     </form>
     <br>
-    <div id="DivTablaID"></div>
 
     <p>Filtros:</p>
     <table id="TablaFiltros">
@@ -66,26 +68,26 @@
         <form>
             <tr id="InputsFiltros">
                 <td id="BúsquedaID">
-                    <input type="number" name="CapturaID" id="CampoFiltroID" placeholder="ID" onchange="javascript:FiltrarProductos(ModoFiltro = 'ID')">
+                    <input type="number" name="CapturaID" id="CampoFiltroID" placeholder="ID" onblur="javascript:FiltroID(ModoFiltro = 'ID')" onchange="javascript:FiltroID(ModoFiltro = 'ID')">
                 </td>
                 <td>
-                    <select name="CapturaMarca" id="CampoFiltroMarca" onclick="javascript:FiltrarProductos(ModoFiltro = 'Marca');">
+                    <select name="CapturaMarca" id="CampoFiltroMarca" onblur="javascript:FiltroMarca(ModoFiltro = 'ID')" onchange="javascript:FiltroMarca(ModoFiltro = 'ID')">
                         <option value="Todas">Todas</option>
                         <option value="Playmobil">Playmobil</option>
                         <option value="LEGO">LEGO</option>
                     </select>
                 </td>
                 <td id="BúsquedaLíneaSerie">
-                    <input type="text" name="CapturaLíneaSerie" id="CampoFiltroLíneaSerie" placeholder="Línea o serie" onclick="javascript:FiltrarProductos(ModoFiltro = 'LíneaSerie');">
+                    <input type="text" name="CapturaLíneaSerie" id="CampoFiltroLíneaSerie" placeholder="Línea o serie" onblur="javascript:FiltroLíneaSerie(ModoFiltro = 'LíneaSerie')" onchange="javascript:FiltroLíneaSerie(ModoFiltro = 'LíneaSerie')">
                 </td>
                 <td id="BúsquedaModelo">
-                    <input type="text" name="CapturaModelo" id="CampoFiltroModelo" placeholder="Modelo del artículo" onclick="javascript:FiltrarProductos(ModoFiltro = 'Modelo');">
+                    <input type="text" name="CapturaModelo" id="CampoFiltroModelo" placeholder="Modelo del artículo" onblur="javascript:FiltroModelo(ModoFiltro = 'Modelo')" onchange="javascript:FiltroModelo(ModoFiltro = 'Modelo')">
                 </td>
                 <td id="BúsquedaBarras">
-                    <input type="text" name="CapturaBarras" id="CampoFiltroBarras" placeholder="Código de barras" onclick="javascript:FiltrarProductos(ModoFiltro = 'Barras');">
+                    <input type="text" name="CapturaBarras" id="CampoFiltroBarras" placeholder="Código de barras" onblur="javascript:FiltroBarras(ModoFiltro = 'Barras')" onchange="javascript:FiltroBarras(ModoFiltro = 'Barras')">
                 </td>
                 <td id="BúsquedaSKU">
-                    <input type="text" name="CapturaSKU" id="CampoFiltroSKU" placeholder="SKU" onclick="javascript:FiltrarProductos(ModoFiltro = 'SKU');">
+                    <input type="text" name="CapturaSKU" id="CampoFiltroSKU" placeholder="SKU" onblur="javascript:FiltroSKU(ModoFiltro = 'SKU')" onchange="javascript:FiltroSKU(ModoFiltro = 'SKU')">
                 </td>
             </tr>
     </table>
@@ -93,8 +95,10 @@
         <input class='BotónEstándar' type='submit' value="Filtrar productos" onclick="javascript:FiltrarProductos();">
     -->
     </form>
-    <br>
+
     <button class="BotónEstándar" onclick="javascript:LimpiarFiltros();">Limpiar filtros</button>
+    <br>
+    <div id="DivTablaID"></div>
     <hr>
 
     <div id="ContenedorCatálogo">
@@ -120,7 +124,7 @@
             echo "</tr>";
 
             while ($columna = mysqli_fetch_array($result)) {
-                echo "<tr class=' FilasProductos'>";
+                echo "<tr class='FilasProductos'>";
                 echo "<td class = 'CeldaParaID'>" . $columna['ID'] . "</td>";
                 echo "<td class = 'CeldaParaArtículo'>" . $columna['Artículo'] . "</td>";
                 echo "<td class = 'CeldaParaMarca'>" . $columna['Marca'] . "</td>";

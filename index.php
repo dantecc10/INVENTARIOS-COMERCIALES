@@ -14,13 +14,16 @@
 </head>
 
 <body>
+    <br>
     <header id="Encabezado">
         <div id="Contenedor-Encabezado">
             <div id="Contenido-Encabezado">
                 <h1>El Mundo del Regalo</h1>
-                <a href="index.php">
-                    <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
-                </a>
+                <div id="DivLOGO">
+                    <a href="index.php">
+                        <img id="Logo" src="IMG/El Mundo del Regalo - LOGO.png" alt="El Mundo del Regalo Zacatlán">
+                    </a>
+                </div>
                 <div class="Menú-Desplegable"> <button class="Botón-Desplegar">Menú</button>
                     <div class="Contenido-Desplegable">
                         <a href="Consulta.php">Consultar productos</a>

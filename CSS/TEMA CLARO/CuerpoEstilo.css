@@ -39,6 +39,7 @@ table.Catálogo tr.Fila1 th {
 table.Catálogo tr.FilasProductos {
     background-color: #004483;
     color: white;
+    font-family: "Roboto","Arial", sans-serif;
 }
 
 table.Catálogo tr#FilaFormulario {
