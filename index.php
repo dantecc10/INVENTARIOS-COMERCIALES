@@ -50,5 +50,7 @@
         <input type="submit">
     </form>
 </body>
+<?php
+?>
 
 </html>

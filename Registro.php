@@ -73,5 +73,7 @@
         <input class="BotónEstándar" type="submit">
     </div>
 </body>
+<?php
+?>
 
 </html>
