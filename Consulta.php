@@ -162,6 +162,19 @@
         echo "</form>";
         ?>
     </div>
+    <form action="CargaCSV.php" method="post" enctype="multipart/form-data" target="_blank">
+        <p>
+            Sube archivos:
+            <input type="file" name="DatosCSV" accept=".csv">
+            <input type="submit" value="Upload" name="EnviarArchivo">
+        </p>
+    </form>
+    <?php
+    if (isset($_SESSION['message']) && $_SESSION['message']) {
+        printf('<b>%s</b>', $_SESSION['message']);
+        unset($_SESSION['message']);
+    }
+    ?>
 </body>
 
 </html>
