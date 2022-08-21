@@ -12,7 +12,7 @@
     <script src="JavaScript/AJAX.js"></script>
     <script src="JavaScript/AjaxFiltros.js"></script>
     <link rel="icon" href="IMG/El Mundo del Regalo - LOGO.png">
-    <title>Consulta</title>
+    <title>Consulta - Servidor IONOS</title>
 </head>
 
 <body>
