@@ -9,7 +9,7 @@ document.getElementById("InputID").value = NuevoID;
 //}
 
 
-function CálculoAsistidoDePrecios() {
+function CálculoAsistidoDePrecios() { 
     var PrecioL = 0, PrecioML = 0, PrecioMS = 0;
     const EnvíoML = 230, EnvíoMS = 156, DivisorDecimalML = 0.75, DivisorDecimalMS = 0.85;
 
