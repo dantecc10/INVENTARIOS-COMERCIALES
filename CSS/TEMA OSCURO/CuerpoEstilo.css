@@ -70,6 +70,7 @@ table.Catálogo th {
     width: 150px;
     text-align: center;
 }
+
 .CeldaParaID,
 .CeldaParaArtículo,
 .CeldaParaMarca,
@@ -84,6 +85,7 @@ table.Catálogo th {
 .CeldaParaSKU {
     padding: 2px;
 }
+
 #copyright {
     text-align: center;
     color: #2e6583;
@@ -216,5 +218,6 @@ hr {
     height: 5px;
     border-color: #07A189;
     border-radius: 5px;
+
     color: #041029;
 }
