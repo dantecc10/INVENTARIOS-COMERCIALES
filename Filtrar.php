@@ -91,10 +91,10 @@
       echo "<td class = 'CeldaParaArtículo'>" . $columna['Artículo'] . "</td>";
       echo "<td class = 'CeldaParaMarca'>" . $columna['Marca'] . "</td>";
       echo "<td class = 'CeldaParaCantidad'>" . $columna['Cantidad'] . "</td>";
-      echo "<td class = 'CeldaParaPrecioL'>$" . $columna['Precio L'] . "</td>";
-      echo "<td class = 'CeldaParaPrecioML'>$" . $columna['Precio ML'] . "</td>";
-      echo "<td class = 'CeldaParaPrecioMS'>$" . $columna['Precio MS'] . "</td>";
-      echo "<td class = 'CeldaParaLíneaSerie'>" . $columna['Línea / Serie'] . "</td>";
+      echo "<td class = 'CeldaParaPrecioL'>$" . $columna['PrecioL'] . "</td>";
+      echo "<td class = 'CeldaParaPrecioML'>$" . $columna['PrecioML'] . "</td>";
+      echo "<td class = 'CeldaParaPrecioMS'>$" . $columna['PrecioMS'] . "</td>";
+      echo "<td class = 'CeldaParaLíneaSerie'>" . $columna['LíneaSerie'] . "</td>";
       echo "<td class = 'CeldaParaModelo'>" . $columna['Modelo'] . "</td>";
       echo "<td class = 'CeldaParaDescripción'>" . $columna['Descripción'] . "</td>";
       echo "<td class = 'CeldaParaBarras'>" . $columna['Barras'] . "</td>";
