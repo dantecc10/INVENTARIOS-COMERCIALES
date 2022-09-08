@@ -55,4 +55,3 @@ function ConstruirTabla($sql)
     echo "</table>";
     mysqli_close($con);
 };
-?>
